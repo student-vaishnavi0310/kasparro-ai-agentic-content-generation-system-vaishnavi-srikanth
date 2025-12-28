@@ -1,0 +1,29 @@
+{
+    "product_a": "GlowBoost Vitamin C Serum",
+    "product_b": "RadiantSkin Vitamin C Serum",
+    "product_a_details": {
+        "product_name": "GlowBoost Vitamin C Serum",
+        "concentration": "10% Vitamin C",
+        "skin_type": "Oily, Combination",
+        "key_ingredients": "Vitamin C, Hyaluronic Acid",
+        "benefits": "Brightening, Fades dark spots",
+        "how_to_use": "Apply 2\u20133 drops in the morning before sunscreen",
+        "side_effects": "Mild tingling for sensitive skin",
+        "price": "\u20b9699"
+    },
+    "product_b_details": {
+        "product_name": "RadiantSkin Vitamin C Serum",
+        "concentration": "15% Vitamin C",
+        "skin_type": "Dry, Normal",
+        "key_ingredients": "Vitamin C, Aloe Vera",
+        "benefits": "Hydrating, Reduces wrinkles",
+        "how_to_use": "Apply 3-4 drops at night",
+        "side_effects": "None reported",
+        "price": "\u20b9799"
+    },
+    "comparisons": {
+        "ingredients": "Common ingredients: Vitamin C. Unique to GlowBoost Vitamin C Serum: Hyaluronic Acid. Unique to RadiantSkin Vitamin C Serum: Aloe Vera.",
+        "prices": "GlowBoost Vitamin C Serum is priced at \u20b9699, while RadiantSkin Vitamin C Serum is priced at \u20b9799.",
+        "concentrations": "GlowBoost Vitamin C Serum has 10% Vitamin C, while RadiantSkin Vitamin C Serum has 15% Vitamin C."
+    }
+}

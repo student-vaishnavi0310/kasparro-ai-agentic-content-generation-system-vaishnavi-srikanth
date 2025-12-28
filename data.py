@@ -1,0 +1,11 @@
+# Raw input data as provided in the challenge
+raw_product_data = {
+    "Product Name": "GlowBoost Vitamin C Serum",
+    "Concentration": "10% Vitamin C",
+    "Skin Type": "Oily, Combination",
+    "Key Ingredients": "Vitamin C, Hyaluronic Acid",
+    "Benefits": "Brightening, Fades dark spots",
+    "How to Use": "Apply 2–3 drops in the morning before sunscreen",
+    "Side Effects": "Mild tingling for sensitive skin",
+    "Price": "₹699"
+}
