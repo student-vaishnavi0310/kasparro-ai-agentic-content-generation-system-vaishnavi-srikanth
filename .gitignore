@@ -1,0 +1,18 @@
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments (if you ever create one)
+venv/
+env/
+.venv/
+
+# VS Code settings (optional, but good to ignore personal settings)
+.vscode/
+
+# Other common ignores
+.DS_Store
+Thumbs.db
+*.log
