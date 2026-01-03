@@ -1,6 +1,19 @@
-class ParserAgent:
-    """Agent responsible for parsing and cleaning raw product data into an internal model."""
-    def run(self, raw_data):
+from agents.base_agent import BaseAgent
+
+
+class ParserAgent(BaseAgent):
+    """
+    Agent responsible for parsing and cleaning raw product data
+    into an internal model.
+    """
+
+    def run(self, task: dict):
+        # Agent only acts on its assigned task
+        if task.get("type") != "PARSE_PRODUCT":
+            return None
+
+        raw_data = task.get("data", {})
+
         return {
             "product_name": raw_data.get("Product Name", ""),
             "concentration": raw_data.get("Concentration", ""),
