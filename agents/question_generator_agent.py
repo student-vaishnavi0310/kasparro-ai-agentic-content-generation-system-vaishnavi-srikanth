@@ -1,35 +1,26 @@
-class QuestionGeneratorAgent:
-    """Agent responsible for automatically generating at least 15 categorized user questions."""
-    def run(self, data):
-        product = data['product_name']
-        questions = {
-            "Informational": [
-                f"What is the concentration of {product}?",
-                f"What skin types is {product} suitable for?",
-                f"What are the key ingredients in {product}?",
-                f"What are the benefits of {product}?",
-                f"Does {product} contain Vitamin C?",
-                f"Does {product} contain Hyaluronic Acid?",
-                f"Is {product} good for brightening skin?",
-                f"Can {product} fade dark spots?",
-                f"Is {product} suitable for oily skin?",
-                f"Is {product} suitable for combination skin?"
-            ],
-            "Safety": [
-                f"What are the side effects of {product}?",
-                f"Is {product} suitable for sensitive skin?"
-            ],
-            "Usage": [
-                f"How to use {product}?",
-                f"When should I apply {product}?",
-                f"How many drops of {product} should I use?"
-            ],
-            "Purchase": [
-                f"What is the price of {product}?"
-            ],
-            "Comparison": [
-                f"How does {product} compare to other serums in terms of concentration?",
-                f"Is {product} better for oily skin than products for dry skin?"
-            ]
+from agents.base_agent import BaseAgent
+
+
+class ParserAgent(BaseAgent):
+    """
+    Agent responsible for parsing and cleaning raw product data
+    into an internal model.
+    """
+
+    def run(self, task: dict):
+        # Agent only acts on its assigned task
+        if task.get("type") != "PARSE_PRODUCT":
+            return None
+
+        raw_data = task.get("data", {})
+
+        return {
+            "product_name": raw_data.get("Product Name", ""),
+            "concentration": raw_data.get("Concentration", ""),
+            "skin_type": raw_data.get("Skin Type", ""),
+            "key_ingredients": raw_data.get("Key Ingredients", ""),
+            "benefits": raw_data.get("Benefits", ""),
+            "how_to_use": raw_data.get("How to Use", ""),
+            "side_effects": raw_data.get("Side Effects", ""),
+            "price": raw_data.get("Price", "")
         }
-        return questions  # 18 questions total
